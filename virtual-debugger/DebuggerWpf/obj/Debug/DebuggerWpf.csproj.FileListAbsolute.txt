@@ -1,0 +1,15 @@
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\bin\Debug\DebuggerWpf.exe.config
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\bin\Debug\DebuggerWpf.exe
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\bin\Debug\DebuggerWpf.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.csproj.AssemblyReference.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\MainWindow.g.cs
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\App.g.cs
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf_MarkupCompile.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf_MarkupCompile.lref
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\MainWindow.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.g.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.Properties.Resources.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.csproj.GenerateResource.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.csproj.CoreCompileInputs.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.exe
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\DebuggerWpf.pdb
