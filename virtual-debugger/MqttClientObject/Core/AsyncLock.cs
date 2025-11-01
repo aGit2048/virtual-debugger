@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace MqttClientObject
 {
+    /// <summary>
+    /// 异步互斥锁
+    /// </summary>
     internal class AsyncLock
     {
         private sealed class Releaser : IDisposable
@@ -32,21 +35,20 @@ namespace MqttClientObject
 
         public Task<IDisposable> LockAsync()
         {
-            var wait = _semaphore.WaitAsync();
+            Task wait = _semaphore.WaitAsync();
 
+            // 如果锁立即可用
             if (wait.IsCompleted)
             {
                 return _releaser;
             }
-            else
-            {
-                return wait.ContinueWith(
+            // 如果需要等待，创建延续任务
+            return wait.ContinueWith(
                     (_, state) => (IDisposable)state,
                     _releaser.Result,
                     CancellationToken.None,
                     TaskContinuationOptions.ExecuteSynchronously,
                     TaskScheduler.Default);
-            }
         }
 
         public void Dispose()

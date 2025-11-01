@@ -3,6 +3,9 @@ using System.Diagnostics.Metrics;
 
 namespace MqttClientObject
 {
+    /// <summary>
+    /// MQTT性能监控
+    /// </summary>
     internal class MqttPerformanceMonitor : IDisposable
     {
         private readonly Meter _meter;

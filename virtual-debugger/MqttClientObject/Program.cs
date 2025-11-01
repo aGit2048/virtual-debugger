@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MqttClientObject
@@ -10,19 +7,11 @@ namespace MqttClientObject
     {
         static async Task Main(string[] args)
         {
-            var options = new MqttClientOptions
-            {
-                BrokerAddress = "localhost",
-                Port = 1883,
-                ClientId = "high_performance_client",
-                Username = "user",
-                Password = "pass",
-                UseTls = false,
-                KeepAliveInterval = 30
-            };
+            MqttConnectOptions.DevelopmentEnvOptions.BrokerAddress = "127.0.0.1";
+            MqttConnectOptions.DevelopmentEnvOptions.Port = 1883;
+            MqttConnectOptions.DevelopmentEnvOptions.AutoReconnect = true;
 
-            // 使用普通的 using 语句而不是 await using
-            using (var client = new UltimateMqttClient(options))
+            using (MqttClientService client = new MqttClientService(MqttConnectOptions.DevelopmentEnvOptions))
             {
                 // 注册消息接收事件
                 client.MessageReceived += async message =>
@@ -31,12 +20,10 @@ namespace MqttClientObject
                     await Task.CompletedTask;
                 };
 
-                // 连接
-                if (await client.ConnectAsync())
+                bool connectStatus = await client.ConnectAsync();
+                if (connectStatus)
                 {
                     Console.WriteLine("连接成功");
-
-                    // 订阅主题
                     await client.SubscribeAsync("test/topic");
 
                     // 发布测试消息
@@ -54,7 +41,7 @@ namespace MqttClientObject
                             Console.WriteLine($"消息 {i} 发布失败");
                         }
 
-                        await Task.Delay(1000);
+                        await Task.Delay(100);
                     }
 
                     Console.WriteLine("按任意键退出...");
@@ -62,11 +49,10 @@ namespace MqttClientObject
                 }
                 else
                 {
-                    Console.WriteLine("连接失败");
+                    Console.WriteLine("Connection failed！");
                 }
             }
-
-            Console.WriteLine("客户端已释放，程序结束");
+            Console.WriteLine("The client has been released and the program has ended！");
         }
     }
 }

@@ -143,20 +143,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncLock.cs" />
-    <Compile Include="IMqttClientService.cs" />
-    <Compile Include="MessageHandler.cs" />
-    <Compile Include="MqttClientOptions.cs" />
-    <Compile Include="MqttConnectionPool.cs" />
-    <Compile Include="MqttMessage.cs" />
-    <Compile Include="MqttMessageActivity.cs" />
-    <Compile Include="MqttMessagePool.cs" />
-    <Compile Include="MqttPerformanceMonitor.cs" />
-    <Compile Include="PooledMqttConnection.cs" />
+    <Compile Include="Core\AsyncLock.cs" />
+    <Compile Include="Core\IMqttClientService.cs" />
+    <Compile Include="Message\MessageHandler.cs" />
+    <Compile Include="Core\MqttConnectOptions.cs" />
+    <Compile Include="Message\MqttMessage.cs" />
+    <Compile Include="Message\MqttMessagePool.cs" />
+    <Compile Include="Core\MqttPerformanceMonitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecureMqttConfigurator.cs" />
-    <Compile Include="UltimateMqttClient.cs" />
+    <Compile Include="MqttClientService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
