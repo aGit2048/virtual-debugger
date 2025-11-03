@@ -13,7 +13,7 @@ namespace MqttClientObject
     /// <summary>
     /// MQTT客户端
     /// </summary>
-    internal class MqttClientService : IMqttClientService
+    public class MqttClientService : IMqttClientService
     {
         /// <summary>
         /// 持久连接
@@ -89,11 +89,6 @@ namespace MqttClientObject
                 async message => await OnMessageReceivedInternal(message),
                 bufferCapacity: 10000,
                 maxParallelism: Environment.ProcessorCount * 2);
-
-            //// 初始化连接池
-            //_connectionPool = new MqttConnectionPool(
-            //    maxPoolSize: 10,
-            //    connectionFactory: CreateMqttClientAsync);
         }
 
         /// <summary>

@@ -1,0 +1,14 @@
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.csproj.AssemblyReference.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\Themes\Generic.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary_MarkupCompile.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary_MarkupCompile.lref
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\bin\Debug\CustomPanelLibrary.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\bin\Debug\CustomPanelLibrary.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\Themes\Styles\ConsolePanel.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.g.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.Properties.Resources.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.csproj.GenerateResource.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomPanelLibrary\obj\Debug\CustomPanelLibrary.csproj.CoreCompileInputs.cache

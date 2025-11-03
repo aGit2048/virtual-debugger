@@ -1,7 +1,7 @@
 ﻿DebuggerWpf
 
 
-winexe
+exe
 C#
 .cs
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\obj\Debug\
@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DebuggerWpf\App.xaml
-1219584333
+2142056914
 
-51579654133
-13-1310406943
-MainWindow.xaml;
+16-1604145077
+181390705325
+Views\MainWindow.xaml;Views\ModalWindow.xaml;
 
 False
 

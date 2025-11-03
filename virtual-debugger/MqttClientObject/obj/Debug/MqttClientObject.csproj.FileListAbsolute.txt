@@ -7,8 +7,6 @@ C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttCli
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\arm64\msdia140.dll
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\TraceReloggerLib.dll
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\Dia2Lib.dll
-C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\MqttClientObject.exe.config
-C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\MqttClientObject.exe
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\MqttClientObject.pdb
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\Microsoft.Diagnostics.FastSerialization.dll
@@ -71,5 +69,7 @@ C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttCli
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.csproj.AssemblyReference.cache
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.csproj.CoreCompileInputs.cache
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.csproj.CopyComplete
-C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.exe
 C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\MqttClientObject.dll.config
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\bin\Debug\MqttClientObject.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\MqttClientObject\obj\Debug\MqttClientObject.dll

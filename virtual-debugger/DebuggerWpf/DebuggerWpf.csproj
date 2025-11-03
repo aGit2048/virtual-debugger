@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C48D0F5E-7DCA-45D9-8D8F-E5079BD660A2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>DebuggerWpf</RootNamespace>
     <AssemblyName>DebuggerWpf</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -34,7 +34,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MQTTnet, Version=4.3.7.1207, Culture=neutral, PublicKeyToken=fdb7629f2e364a63, processorArchitecture=MSIL">
+      <HintPath>..\packages\MQTTnet.4.3.7.1207\lib\net461\MQTTnet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,7 +61,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="AOD\LoadControllerDataTable.cs" />
+    <Compile Include="Converter\LogTypeToColorConverter.cs" />
+    <Compile Include="DebugEventArg\ConsoleLogEventArsg.cs" />
+    <Compile Include="Models\ConsoleLogModel.cs" />
+    <Compile Include="MqttUtility\MqttClientManager.cs" />
+    <Compile Include="MqttUtility\MqttMsgGenerator.cs" />
+    <Compile Include="Components\Notificator.cs" />
+    <Compile Include="Models\ControllerDataTableModel.cs" />
+    <Compile Include="MqttUtility\MQTTBaseMessage.cs" />
+    <Compile Include="ViewModels\ControllerDataTableViewModel.cs" />
+    <Compile Include="Views\ModalWindow.xaml.cs">
+      <DependentUpon>ModalWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,10 +82,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ModalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,6 +109,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +117,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControlLibrary\CustomControlLibrary.csproj">
+      <Project>{dba86cfd-d4f4-480d-bf6c-6d3dfa9c6ff8}</Project>
+      <Name>CustomControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeBuggerCore\DeBuggerCore.csproj">
+      <Project>{ea229379-70dd-4f5b-bda1-29418c1db8c6}</Project>
+      <Name>DeBuggerCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileUtility\FileUtility.csproj">
+      <Project>{2daebe21-6f0c-47e5-aab3-452509b164f5}</Project>
+      <Name>FileUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MqttClientObject\MqttClientObject.csproj">
+      <Project>{102a2666-34ea-4c1f-9d96-12caa2f640ee}</Project>
+      <Name>MqttClientObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

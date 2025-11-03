@@ -1,0 +1,16 @@
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\bin\Debug\CustomControlLibrary.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\bin\Debug\CustomControlLibrary.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.csproj.AssemblyReference.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary_MarkupCompile.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary_MarkupCompile.lref
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\Themes\Generic.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.g.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.Properties.Resources.resources
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.csproj.GenerateResource.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\CustomControlLibrary.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\Themes\PanelControlStyle\ConsolePanel.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\Themes\BaseStyles\LabelToggleButton.baml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\CustomControlLibrary\obj\Debug\Themes\BaseStyles\BasicButton.baml

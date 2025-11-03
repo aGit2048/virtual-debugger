@@ -1,0 +1,6 @@
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\bin\Debug\DeBuggerCore.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\bin\Debug\DeBuggerCore.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\obj\Debug\DeBuggerCore.csproj.AssemblyReference.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\obj\Debug\DeBuggerCore.csproj.CoreCompileInputs.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\obj\Debug\DeBuggerCore.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\DeBuggerCore\obj\Debug\DeBuggerCore.pdb

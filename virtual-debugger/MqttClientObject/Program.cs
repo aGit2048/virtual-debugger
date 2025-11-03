@@ -5,7 +5,7 @@ namespace MqttClientObject
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static async Task Main1(string[] args)
         {
             MqttConnectOptions.DevelopmentEnvOptions.BrokerAddress = "127.0.0.1";
             MqttConnectOptions.DevelopmentEnvOptions.Port = 1883;

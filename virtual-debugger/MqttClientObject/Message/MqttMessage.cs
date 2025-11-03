@@ -11,7 +11,7 @@ namespace MqttClientObject
     /// <summary>
     /// Mqtt消息
     /// </summary>
-    internal class MqttMessage
+    public class MqttMessage
     {
         /// <summary>
         /// 主题

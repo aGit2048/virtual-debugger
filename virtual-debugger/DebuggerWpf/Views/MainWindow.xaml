@@ -1,0 +1,108 @@
+﻿<Window x:Class="DebuggerWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DebuggerWpf"
+        xmlns:units="clr-namespace:CustomControlLibrary;assembly=CustomControlLibrary"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid Name="WindowMainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30" MinHeight="30" MaxHeight="800"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#202124" BorderThickness="0 0 0 1" BorderBrush="#18191c"/>
+        <DataGrid Grid.Row="1" Name="ControllerDataTable" ItemsSource="{Binding ControllerDataTable}"
+                  AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="主题" Binding="{Binding Topic}" Width="120"/>
+                <DataGridTextColumn Header="模型名称" Binding="{Binding ModelName}" Width="120"/>
+                <DataGridTextColumn Header="是否激活" Binding="{Binding IsActive}" Width="80"/>
+                <DataGridTextColumn Header="信号类型" Binding="{Binding SignalType}" Width="80"/>
+                <DataGridTextColumn Header="数据类型" Binding="{Binding DataType}" Width="80"/>
+                <DataGridTextColumn Header="脚本类型" Binding="{Binding ScriptType}" Width="100"/>
+                <DataGridTemplateColumn Header="操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="生成" Click="OnClick_GenerateMsgCode" Tag="{Binding}" Margin="10 0 5 0"/>
+                                <Button Content="发送" Click="OnClick_SendMqttMsg" Tag="{Binding}" Margin="5 0 5 0"/>
+                                <Button Content="编辑" Click="OnClick_EditItem" Margin="5 0 10 0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <GridSplitter Grid.Row="2" Height="2" Background="#141414" HorizontalAlignment="Stretch" FocusVisualStyle="{x:Null}"/>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#141414">
+                <units:BasicButton Width="80" Height="30" 
+                                        HorizontalAlignment="Left" 
+                                        Background="#383838" 
+                                        BorderBrush="#2c5d87" CornerRadius="2 2 0 0"
+                                        Margin="0 0 2 0" BorderThickness="0 2 0 0"
+                                        Content="Console" Foreground="#b2b2b2"
+                                        Cursor="Hand" DoubleClick="OnDoubleClick_ControlPanelTitle"
+                                        DoubleClickInterval="400"/>
+            </StackPanel>
+            <Border Grid.Row="1" Background="#383838">
+                <units:ConsolePanel x:Name="ConsolePanel"  ItemsSource="{Binding ConsoleLogList}" ClearClick="OnClick_Clear"
+                                    ShowControllerInfoCheck="OnShowControllerInfo_CheckValueChanged"
+                                    CopyListItem="OnClick_CopyListItem"/>
+            </Border>
+        </Grid>
+        <!--<Border Grid.Row="3" Background="#383838">-->
+            
+            <!--<ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="20">
+                    --><!-- 这里放置需要滚动的内容 --><!--
+                    <TextBlock Text="可滚动区域内容" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    --><!-- 示例内容 --><!--
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 1" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 2" FontSize="14"/>
+                    </Border>
+                    --><!-- 添加更多内容以展示滚动效果 --><!--
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 3" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 4" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 5" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 6" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 7" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 8" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 9" FontSize="14"/>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,5">
+                        <TextBlock Text="项目 10" FontSize="14"/>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>-->
+        <!--</Border>-->
+    </Grid>
+</Window>

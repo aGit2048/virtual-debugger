@@ -1,0 +1,14 @@
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\Test.exe.config
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\Test.exe
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\Test.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\FileUtility.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\EPPlus.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\FileUtility.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\EPPlus.xml
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\obj\Debug\Test.csproj.AssemblyReference.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\obj\Debug\Test.exe
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\obj\Debug\Test.pdb
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hh\Mine\Project\unity-project\virtual-debugger\virtual-debugger\Test\bin\Debug\Newtonsoft.Json.xml

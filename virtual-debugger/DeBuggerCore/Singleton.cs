@@ -1,0 +1,24 @@
+﻿namespace DeBuggerCore
+{
+    public class Singleton<T> where T : class, new()
+    {
+        private static object locker = new object();
+        private static T _instance;
+
+        public static T Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    lock (locker)
+                    {
+                        _instance = new T();
+                    }
+                }
+
+                return _instance;
+            }
+        }
+    }
+}

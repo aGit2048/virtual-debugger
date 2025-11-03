@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CustomControlLibrary;component/Themes/BaseStyles/BasicButton.xaml"/>
+        <ResourceDictionary Source="/CustomControlLibrary;component/Themes/BaseStyles/LabelToggleButton.xaml"/>
+        <ResourceDictionary Source="/CustomControlLibrary;component/Themes/PanelControlStyle/ConsolePanel.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

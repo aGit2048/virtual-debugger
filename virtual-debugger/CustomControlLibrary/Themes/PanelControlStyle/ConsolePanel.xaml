@@ -1,0 +1,165 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CustomControlLibrary"
+                    xmlns:converters="clr-namespace:CustomControlLibrary.Converters">
+
+    <Style x:Key="BaseButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#232323"/>
+        <Setter Property="BorderThickness" Value="0 0 1 0"/>
+        <Setter Property="Padding" Value="10 0 10 0"/>
+        <Setter Property="Foreground" Value="#9c9c9c"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BaseToggleButtonStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#232323"/>
+        <Setter Property="BorderThickness" Value="0 0 1 0"/>
+        <Setter Property="Padding" Value="10 0 10 0"/>
+        <Setter Property="Foreground" Value="#9c9c9c"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BaseListBoxStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Foreground" Value="#9c9c9c"/>
+        <Setter Property="Padding" Value="0 4 0 4"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <!-- 关键：水平拉伸 -->
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <!-- 关键：垂直拉伸 -->
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <!-- 移除所有默认触发器 -->
+                    <ControlTemplate.Triggers>
+                        <!-- 这里不添加任何触发器，就不会有悬停效果 -->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                <Setter Property="Background" Value="#383838"/>
+            </Trigger>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                <Setter Property="Background" Value="#3f3f3f"/>
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#2c5d87"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style TargetType="{x:Type local:ConsolePanel}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ConsolePanel}">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="22"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!--工具栏位-->
+                            <Border Grid.Row="0" Background="#3c3c3c" BorderBrush="#232323" BorderThickness="0 0 0 1">
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="PART_ClearButton" Content="Clear" Style="{StaticResource BaseButtonStyle}"/>
+                                    <local:LabelToggleButton x:Name="PART_ShowControllerInfoToggle" 
+                                                             Content="Show Controller Info" BorderBrush="#232323" BorderThickness="0 0 1 0"
+                                                             Foreground="#9c9c9c" IsChecked="{Binding IsShowControllerInfo, 
+                                                             RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"/>
+                                    <local:LabelToggleButton  x:Name="PART_CopyAll" 
+                                                             Content="Copy All" BorderBrush="#232323" BorderThickness="0 0 1 0"
+                                                             Foreground="#9c9c9c" IsChecked="{Binding IsCopyAll, 
+                                                             RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}"/>
+                                </StackPanel>
+                            </Border>
+                            <!--列表-->
+                            <ListBox x:Name="PART_LoggerContainer" Grid.Row="1" Background="Transparent" BorderThickness="0" ItemsSource="{TemplateBinding ItemsSource}"
+                                     AlternationCount="2" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem" BasedOn="{StaticResource BaseListBoxStyle}"/>
+                                </ListBox.ItemContainerStyle>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <DockPanel LastChildFill="True">
+
+                                            <local:BasicButton DockPanel.Dock="Right" Content="copy"
+                                                               Margin="30 0 30 0" VerticalAlignment="Center" BorderThickness="1"
+                                                               CornerRadius="2" BorderBrush="#232323"  Padding="4"
+                                                               Foreground="#9c9c9c" VerticalContentAlignment="Center" Tag="{Binding}">
+                                                <local:BasicButton.Style>
+                                                    <Style TargetType="{x:Type local:BasicButton}">
+                                                        <Setter Property="Background" Value="Transparent"/>
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="#2c5d87"/>
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </local:BasicButton.Style>
+                                            </local:BasicButton>
+
+                                            <TextBlock DockPanel.Dock="Left" Text="{Binding DateTime, StringFormat='{}{0:yyyy-MM-dd HH:mm:ss}'}" 
+                                                       Foreground="#9c9c9c" Margin="5,0,10,0"
+                                                       FontFamily="Consolas" FontSize="14"/>
+
+                                            <TextBlock DockPanel.Dock="Left" Text="{Binding LogType, StringFormat='[{0}]'}"
+                                                       Margin="0,0,10,0" FontFamily="Consolas" FontSize="14"
+                                                       Foreground="{Binding LogType, Converter={x:Static converters:LogTypeToColorConverter.Instance}}"/>
+
+                                            <TextBlock Grid.Column="2" Text="{Binding Content}"
+                                                       Foreground="#9c9c9c" FontFamily="Consolas" FontSize="14"
+                                                       TextWrapping="Wrap" LineHeight="18"/>
+                                            
+                                            <!--</Grid>-->
+                                        </DockPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
